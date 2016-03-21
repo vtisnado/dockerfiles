@@ -1,7 +1,7 @@
 
 dockerfile-ubuntu-nginx
 =======================
-This image is based in Ubuntu 14.04.
+This image is based in Ubuntu 14.04.4
 
 Build the image with this command:
 ```
