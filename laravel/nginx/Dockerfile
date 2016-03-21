@@ -21,8 +21,3 @@ RUN DEBIAN_FRONTEND=noninteractive mkdir /usr/share/nginx/html/logs
 
 # expose port so server can be accesed via web
 EXPOSE 80
-
-# Build the image with the following command:
-# docker build -t [IMAGE_NAME] [DOCKERFILE_PATH]
-# Run the container with the following command:
-# docker run -ti -p 80:80 [IMAGE_NAME] bash
