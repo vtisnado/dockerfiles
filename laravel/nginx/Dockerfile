@@ -8,7 +8,8 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get install -y nano
 
 # install Nginx and PHP
 RUN DEBIAN_FRONTEND=noninteractive sudo apt-get install -y nginx && \
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -y php5-fpm
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -y php5-fpm && \
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -y php5-mysql
 
 # change PHP FPM permissions 
 RUN sed -i 's/;listen.mode/listen.mode/g' /etc/php5/fpm/pool.d/www.conf
