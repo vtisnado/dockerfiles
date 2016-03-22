@@ -11,7 +11,7 @@ Setup
 =====
 Run the container with the following command:
 ```
-$ docker run -ti -p 3306:3306 <image_name> bash
+$ docker run -ti --name <container_name> -p 3306:3306 <image_name> bash
 ```
 Launching MySQL
 ---------------
