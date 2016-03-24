@@ -11,7 +11,7 @@ Setup
 =====
 Run the container with the following command:
 ```
-$ docker run -ti --name nginx --link mysql -p 80:80 <image_name> bash
+$ docker run -ti --name nginx --link mysql -p 80:80 -v /usr/share/nginx/html:/usr/share/nginx/html <image_name> bash
 ```
 Launching Nginx
 ---------------
@@ -20,3 +20,5 @@ After the cointainer start, run the following commands so PHP-FPM can detect the
 $ sudo service php5-fpm restart
 $ sudo service nginx start
 ```
+
+Remember to exit with CTRL/CMD + P + Q so the container keep running in the background.
