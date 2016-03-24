@@ -23,4 +23,4 @@ $ sudo service php5-fpm restart
 $ sudo service nginx start
 ```
 
-Remember to exit with CTRL/CMD + P + Q so the container keep running in the background.
+Remember to exit with **CTRL/CMD + P + Q** so the container keep running in the background.
