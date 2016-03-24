@@ -13,6 +13,8 @@ Run the container with the following command:
 ```
 $ docker run -ti --name nginx --link mysql -p 80:80 -v /usr/share/nginx/html:/usr/share/nginx/html <image_name> bash
 ```
+Notice that you should run the mysql container first so the --link work.
+
 Launching Nginx
 ---------------
 After the cointainer start, run the following commands so PHP-FPM can detect the config changes:
