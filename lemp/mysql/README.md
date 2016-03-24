@@ -20,3 +20,4 @@ After the container start, run the following commands to secure the MySQL instal
 $ service mysql start
 $ sudo mysql_secure_installation
 ```
+Remember to exit with **CTRL/CMD + P + Q** so the container keep running in the background.
