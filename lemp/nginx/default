@@ -10,8 +10,8 @@ server {
                 try_files $uri $uri/ /index.php?q=$uri&$args;
         }
 
-        access_log /usr/share/nginx/html/logs/nginx-access.log;
-        error_log /usr/share/nginx/html/logs/nginx-error.log;
+        access_log /usr/share/nginx/logs/nginx-access.log;
+        error_log /usr/share/nginx/logs/nginx-error.log;
 
         error_page 404 /404.html;
 
@@ -29,5 +29,4 @@ server {
                 include fastcgi_params;
 
         }
-
 }
