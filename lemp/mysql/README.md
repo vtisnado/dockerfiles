@@ -24,10 +24,20 @@ ln -s /usr/docker/mysql /var/lib/mysql
 ```
 
 Launching MySQL
----------------
+===============
 Run the following commands to start the service and secure the MySQL installation
 ```
 $ service mysql start
 $ sudo mysql_secure_installation
 ```
 Remember to exit with **CTRL/CMD + P + Q** so the container keep running in the background.
+
+
+Connecting to MySQL server
+==========================
+Now you have to grant access to a MySQL user so you can connect from you PHP script in the nginx server:
+
+```
+GRANT ALL ON <database_name>.* TO <user>@'<nginx_container_ip>' IDENTIFIED BY '<password>';
+```
+
