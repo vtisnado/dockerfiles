@@ -1,2 +1,2 @@
 # dockerfiles
-Development enviroment in Docker
+Some development enviroments in Docker.
