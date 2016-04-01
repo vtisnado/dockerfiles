@@ -5,17 +5,27 @@ This image is based in Ubuntu 14.04.4
 
 Build the image with this command:
 ```
-$ docker build -t <image_name> <dockerfile_path>
+$ docker build -t ubuntu_mysql <dockerfile_path>
 ```
 Setup
 =====
 Run the container with the following command:
 ```
-$ docker run -ti --name mysql -p 3306:3306 <image_name> bash
+$ docker run -ti --name mysql -p 3306:3306 -v /usr/docker/mysql:/usr/docker/mysql ubuntu_mysql bash
 ```
+Persistent data
+===============
+After the container start, run the following commands in order to change the mysql data directory to the server host.
+```
+cp -rap /var/lib/mysql /usr/docker/
+chown -R mysql.mysql /usr/docker/mysql
+mv /var/lib/mysql /var/lib/mysql_old
+ln -s /usr/docker/mysql /var/lib/mysql
+```
+
 Launching MySQL
 ---------------
-After the container start, run the following commands to secure the MySQL installation
+Run the following commands to start the service and secure the MySQL installation
 ```
 $ service mysql start
 $ sudo mysql_secure_installation
