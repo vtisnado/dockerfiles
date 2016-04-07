@@ -19,3 +19,5 @@ RUN pip install gunicorn
 
 ADD gunicorn_config.py /webapps/django/
 
+# ******** ALERT: WORKING IN PROGRESS ************
+
