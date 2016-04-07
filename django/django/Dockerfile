@@ -16,3 +16,6 @@ RUN pip install django
 
 # install Gunicorn
 RUN pip install gunicorn
+
+ADD gunicorn_config.py /webapps/django/
+
