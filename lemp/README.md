@@ -8,4 +8,4 @@ You will need to create the following directory in the host server in order to k
 $ mkdir /usr/docker/
 ```
 
-The docker container with Nginx will be linked to the MySQL container and both hava access to read and write persistent files in **/usr/docker/**
+The docker container with Nginx will be linked to the MySQL container and both have access to read and write persistent files in **/usr/docker/**
