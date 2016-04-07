@@ -1,5 +1,5 @@
 
-dockerfile-ubuntu-django-mysql
+dockerfile-django-mysql
 =======================
 This image is based in Ubuntu 14.04.4
 
