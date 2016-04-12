@@ -8,6 +8,7 @@ RUN sudo apt-get upgrade -y
 
 # install Virtualenv
 RUN apt-get install -y python-virtualenv
+RUN mkdir -p /webapps/django/
 RUN sudo virtualenv /webapps/django/
 RUN source /webapps/django/bin/activate
 
