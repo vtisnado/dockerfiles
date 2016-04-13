@@ -6,22 +6,27 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN sudo apt-get update -y
 RUN sudo apt-get upgrade -y
 
+# install Python
+RUN sudo apt-get install -y python python-setuptools
+RUN sudo easy_install pip
+
 # install Virtualenv
-RUN sudo apt-get install -y python-pip
-RUN pip install virtualenv
-#RUN sudo apt-get install -y python-virtualenv
+RUN sudo pip install virtualenv
 RUN mkdir -p /webapps/django/
 RUN sudo virtualenv /webapps/django/
-RUN source /webapps/django/bin/activate
+RUN cd /webapps/django
+RUN sudo source bin/activate
 
 # install Django
-RUN pip install django
+RUN sudo pip install django
 
 # install Gunicorn
-RUN pip install gunicorn
+RUN sudo pip install gunicorn
 
 # add Gunicorn configuration
 ADD gunicorn_config.py /webapps/django/
 
 # ******** ALERT: WORKING IN PROGRESS ************
+
+
 
